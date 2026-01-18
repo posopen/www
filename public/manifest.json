@@ -1,0 +1,16 @@
+﻿{
+  "name": "posOpen",
+  "short_name": "posOpen",
+  "description": "Open, modular, offline-capable Point-of-Sale platform",
+  "start_url": "/pos",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "icons": [
+    {
+      "src": "/brand/logo-icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
