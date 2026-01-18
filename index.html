@@ -1,1 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Core Meta -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>posOpen | Open, Offline‑First, Modular POS Platform</title>
+  <meta name="description" content="posOpen is an open, modular, offline‑first Point‑of‑Sale platform. Built for small businesses, emerging markets, and reliable daily operations without vendor lock‑in." />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#020617" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://posopen.github.io/www/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="posOpen — Open, Modular POS" />
+  <meta property="og:description" content="Quietly reliable, offline‑first Point‑of‑Sale software with no vendor lock‑in." />
+  <meta property="og:url" content="https://posopen.github.io/www/" />
+  <meta property="og:site_name" content="posOpen" />
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="posOpen — Open, Modular POS" />
+  <meta name="twitter:description" content="Offline‑first commerce infrastructure, designed to run a real shop." />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "posOpen",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "description": "Open, modular, offline‑first Point‑of‑Sale platform for small and medium businesses.",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+
+  <!-- Google Analytics GA4 (replace ID) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);} 
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX', { anonymize_ip: true });
+  </script>
+
+  <style>
+    :root {
+      /* Brand palette – light, neutral, professional */
+      --bg: #ffffff;
+      --bg-soft: #f8fafc;
+      --panel: #ffffff;
+      --border: #e5e7eb;
+      --fg: #0f172a;
+      --muted: #475569;
+      --accent: #2563eb; /* calm, trustworthy blue */
+      --accent-soft: #dbeafe;
+      --radius: 0.75rem;
+      --max: 1100px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    header, section, footer {
+      max-width: var(--max);
+      margin: auto;
+      padding: 2.5rem 1.25rem;
+    }
+
+    header {
+      padding-top: 2rem;
+    }
+
+    /* Top bar */
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+    }
+
+    .logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 0.5rem;
+      background: var(--bg-soft);
+      border: 1px solid var(--border);
+      display: grid;
+      place-items: center;
+    }
+
+    .logo img {
+      width: 24px;
+      height: 24px;
+      display: block;
+    }
+
+    .brand-name {
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    h1 {
+      font-size: clamp(2rem, 6vw, 3rem);
+      line-height: 1.15;
+      margin: 0 0 1rem 0;
+    }
+
+    h2 {
+      margin: 0 0 1rem 0;
+      font-size: 1.6rem;
+    }
+
+    h3 {
+      margin: 0 0 0.5rem 0;
+      font-size: 1.05rem;
+    }
+
+    p {
+      margin: 0.5rem 0;
+    }
+
+    .lead {
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 46rem;
+    }
+
+    .cta {
+      display: flex;
+      gap: 0.75rem;
+      margin-top: 1.75rem;
+      flex-wrap: wrap;
+    }
+
+    .cta a {
+      padding: 0.75rem 1.1rem;
+      border-radius: var(--radius);
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+    }
+
+    .primary {
+      background: var(--accent);
+      color: white;
+    }
+
+    .secondary {
+      background: var(--accent-soft);
+      color: var(--accent);
+    }
+
+    section {
+      background: var(--bg-soft);
+      border-top: 1px solid var(--border);
+    }
+
+    section:nth-of-type(even) {
+      background: var(--bg);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+      margin: 0.5rem 0 0 0;
+    }
+
+    li {
+      margin: 0.25rem 0;
+      color: var(--muted);
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.9rem;
+      text-align: center;
+      background: var(--bg);
+    }
+
+    code {
+      background: var(--bg-soft);
+      padding: 0.15rem 0.35rem;
+      border-radius: 0.25rem;
+      color: var(--accent);
+      font-size: 0.9em;
+    }
+
+    @media (min-width: 768px) {
+      .grid {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <div class="logo"><img src="https://raw.githubusercontent.com/posopen/www/ad143e7938f24a1523354afaeef30bbc79ede01a/public/brand/logo-icon.svg" alt="posOpen logo" /></div>
+    <div class="brand-name">posOpen</div>
+  </div>
+
+  <h1>Open, offline‑first Point‑of‑Sale software</h1>
+  <p class="lead">
+    posOpen is a modular POS platform designed for small businesses and emerging markets. It runs reliably offline, avoids vendor lock‑in, and stays simple where it matters most.
+  </p>
+  <div class="cta">
+    <a class="primary" href="https://github.com/posopen">View on GitHub</a>
+    <a class="secondary" href="#principles">How it works</a>
+  </div>
+</header>
+
+<section>
+  <h2>Why posOpen exists</h2>
+  <div class="grid">
+    <div class="card">
+      <p>Most POS systems are:</p>
+      <ul>
+        <li>Vendor‑locked</li>
+        <li>Over‑engineered</li>
+        <li>Cloud‑dependent</li>
+        <li>Expensive to leave</li>
+      </ul>
+    </div>
+    <div class="card">
+      <p>posOpen is different.</p>
+      <p>
+        It is a platform, not a monolith — built so merchants can own their system, developers can extend it cleanly, and operators can run offline without fear.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="principles">
+  <h2>Core principles</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Open standards</h3>
+      <p>No proprietary silos. APIs first, data always accessible.</p>
+    </div>
+    <div class="card">
+      <h3>Offline‑first by design</h3>
+      <p>Offline is a first‑class state, not a fallback mode.</p>
+    </div>
+    <div class="card">
+      <h3>Configuration over custom code</h3>
+      <p>Adapt without rewrites. Replace parts without breaking the system.</p>
+    </div>
+    <div class="card">
+      <h3>Reliability beats cleverness</h3>
+      <p>Daily operations matter more than theoretical elegance.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>MVP functional scope</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>Core POS</h3>
+      <ul>
+        <li>Products & pricing</li>
+        <li>Sales transactions</li>
+        <li>Tax / VAT handling</li>
+        <li>Digital & printable receipts</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Inventory</h3>
+      <ul>
+        <li>Stock tracking</li>
+        <li>Manual adjustments</li>
+        <li>Low‑stock alerts</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Payments</h3>
+      <ul>
+        <li>Cash handling</li>
+        <li>Provider‑agnostic gateways</li>
+        <li>Transaction reconciliation</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Reporting</h3>
+      <ul>
+        <li>Daily sales summaries</li>
+        <li>Cash‑up reports</li>
+        <li>Exportable CSV / JSON</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Offline‑first architecture</h2>
+  <div class="grid">
+    <div class="card">
+      <ul>
+        <li>Transactions work offline</li>
+        <li>Receipts print immediately</li>
+        <li>Data syncs when connectivity returns</li>
+        <li>Conflicts are auditable, not silent</li>
+      </ul>
+      <p>
+        Offline is not an edge case. It is assumed.
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>posOpen — quietly reliable commerce infrastructure.</p>
+</footer>
+
+</body>
+</html>
 
