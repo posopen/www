@@ -4,7 +4,7 @@ Repo: posopen/www
 -->
 
 <p align="center">
-  <img src="./public/brand/logo-icon.svg" alt="posOpen logo" width="96" height="96" />
+  <img src="https://raw.githubusercontent.com/posopen/www/d7b897263ca4bd6f2bf90e92da1f78594b02daaa/public/brand/logo-icon.svg" alt="posOpen logo" width="96" height="96" />
 </p>
 
 <h1 align="center">posOpen</h1>
